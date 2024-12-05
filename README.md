@@ -1,7 +1,3 @@
-Here’s a general template for the **README** of your main repository (Ansible repo), which contains all your individual projects. The README includes a section for each project and its respective README.
-
----
-
 # Ansible Projects Repository
 
 This repository contains a collection of projects and automation playbooks built using **Ansible**. Each project aims to automate various tasks such as provisioning infrastructure, configuration management, and application deployment, with a focus on using Ansible’s powerful automation capabilities.
