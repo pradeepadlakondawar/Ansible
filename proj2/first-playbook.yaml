@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  become: true
+  roles:
+    - insall_apache2
