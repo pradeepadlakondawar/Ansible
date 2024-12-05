@@ -2,5 +2,5 @@
 - hosts: all
   become: true
   roles:
-    - bsmeding.docker 
+    - bsmeding.docker   # installed rle from galaxy.ansible 
 
