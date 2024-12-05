@@ -9,7 +9,7 @@ Each project has its own directory, with a dedicated README detailing the specif
 The following projects are included in this repository:
 
 - [**Project 1: Example Project 1**](./proj1/README.md): This project demonstrates a basic Ansible playbook for automating a simple task (e.g., installing a software package, configuring services, etc.).
-- [**Project 2: EC2 Instance Creation on AWS**](./proj2/README.md): This project showcases how to automate the creation of AWS EC2 instances using an Ansible Galaxy collection.
+- [**Project 2: Docker Installation using an Ansible role**](./proj2/README.md): This project demonstrates the automation of Docker installation on remote machines using Ansible.
 - [**Project 3: Creating EC2 Instances on AWS with Ansible**](./proj3/README.md): Automates the provisioning of EC2 instances on AWS by using a custom collection and leveraging variable precedence for flexibility.
 
 ## Prerequisites
@@ -65,7 +65,7 @@ Each project contains its own Ansible playbook and instructions on how to use it
 
 ### Example Workflow
 
-For **Project 2** (EC2 instance creation), for example, the steps would include:
+For **Project 3** (EC2 instance creation), for example, the steps would include:
 
 1. Set up the `inventory.ini` file with your EC2 details.
 2. Customize variables in the `ec2_create.yml` playbook (e.g., instance type, region).
@@ -80,7 +80,7 @@ Each project folder has a **README.md** file that explains the specific tasks, i
 
 For example:
 - **Project 1: Example Project 1**: [README](./proj1/README.md)
-- **Project 2: EC2 Instance Creation on AWS**: [README](./proj2/README.md)
+- **Project 2: Docker Installation using an Ansible role**: [README](./proj2/README.md)
 - **Project 3: Creating EC2 Instances on AWS with Ansible**: [README](./proj3/README.md)
 
 ## Contributing
