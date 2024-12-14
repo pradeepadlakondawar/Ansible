@@ -1,0 +1,14 @@
+---
+
+- hosts: all
+  become: true
+
+  tasks:
+    #    - name: Print allthe ansible gathered ansibe_facts
+      #      ansible.built.command:
+        #        var: ansible_facts
+
+    - name: Shutdown ubuntu instances only
+      ansible.builtin.command: /sbin/shutdown -t now
+      when:
+       ansible_facts['os_family'] == "Debian" #"RedHat" 

@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Debug loop items
+      debug:
+        msg: "Image ID: {{ item.image_id }}, Name: {{ item.name }}"
+      loop:
+        - { image_id: "ami-05edb7c94b324f73c", name: "managed-node-1" }
+        - { image_id: "ami-075449515af5df0d1", name: "managed-node-2" }
+        - { image_id: "ami-075449515af5df0d1", name: "managed-node-3" }
