@@ -1,0 +1,12 @@
+---
+# tasks file for roles/apache_webserver
+- name: Install apacheon Ubuntu
+  apt:
+    name: "{{ apache_service_name }}"
+    state: present
+    update_cache: yes
+
+- name: Deploy a simple Website
+  copy:
+    src: "{{ html_src_file }}"
+    dest: "{{ apache_index_file }}"

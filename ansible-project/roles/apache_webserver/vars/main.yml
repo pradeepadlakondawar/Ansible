@@ -1,0 +1,6 @@
+---
+# vars file for roles/apache_webserver
+html_src_file: index.html
+apache_service_name: apache2
+apache_index_file: /var/www/html/index.html
+

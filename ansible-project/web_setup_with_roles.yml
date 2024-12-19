@@ -1,0 +1,6 @@
+- name: Install Apache Webserver and Deploy Website
+  hosts: Web
+  become: true
+  roles:
+    - apache_webserver
+

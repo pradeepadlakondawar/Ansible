@@ -1,0 +1,7 @@
+---
+# vars file for webserver
+
+apache_port: 8080
+
+site_title: "My Awesome Website"
+site_name: "AwesomeWeb"

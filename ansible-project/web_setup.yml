@@ -1,0 +1,32 @@
+---
+- name: Intall Apache Webserver and Deploy Website
+  hosts: Web
+  become: true
+
+  vars:
+    apache_index_file: /var/www/html/index.html
+
+  tasks:
+  - name: Install apacheon Ubuntu
+    apt:
+      name: apache2
+      state: present
+      update_cache: yes
+
+  - name: Start and Enable Apache Service
+    service:
+      name: apache2
+      state: started
+      enabled: yes
+
+  - name: Deploy a simple Website
+    copy:
+      content: "<h1> Welcome to My Ansible Deployed Web Server</h1>"
+      dest: "{{ apache_index_file }}"
+      owner: www-data
+      group: www-data
+      mode: '0644'
+
+  - name: Ensure Apache is running
+    shell: systemctl status apache2
+

@@ -1,0 +1,22 @@
+---
+# tasks file for webserver
+
+- name: Install Apache
+  ansible.builtin.yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - apache2
+  when: ansible_os_family == "RedHat"
+    
+- name: Start and enable Apache
+  ansible.builtin.service:
+    name: apache2
+    state: started
+    enabled: true
+    
+- name: Deploy index.html
+  ansible.builtin.template:
+    src: templates/index.html.j2
+    dest: /var/www/html/index.html
+  notify: Restart Apache
